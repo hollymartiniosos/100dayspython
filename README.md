@@ -2,4 +2,4 @@
 
 This is my attempt at the 100 days of Python bootcamp course from Udemy
 
-Now with updated deployment
+Now with updated deployment and local check
