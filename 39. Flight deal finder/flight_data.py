@@ -14,8 +14,7 @@ class FlightData:
     def __init__(self, 
                  origin_airport_code: str = "BNE",
                  trip_duration: tuple[int,int] = (7,28), 
-                 currency: str = "AUD", 
-                 max_stopovers: int = 2) -> None:
+                 currency: str = "AUD") -> None:
         
         self.headers = {
             "apikey": KIWI_KEY 
@@ -23,9 +22,9 @@ class FlightData:
         self.origin_airport_code= origin_airport_code
         self.trip_duration = trip_duration
         self.currency=currency
-        self.max_stopovers = max_stopovers
+          
 
-    def search_flights(self, destination_code: str, price: int) -> list:
+    def search_flights(self, destination_code: str, price: int, max_stopovers: int = 2, via_city: str = "") -> list:
         #Znajdź loty dla destynacji z sheety
         params = {
             "fly_from": self.origin_airport_code,
@@ -37,7 +36,8 @@ class FlightData:
             "flight_type": "round",
             "curr": self.currency, 
             "price_to": price,
-            "max_stopovers": self.max_stopovers,
+            "max_stopovers": max_stopovers,
+            "via_city": via_city
 
 
 
