@@ -15,4 +15,14 @@ h3, h4 {
     color: rgb(118, 37, 37);
 }
 
+.tri {
+    background-color: aqua;
+}
 
+.coffee {
+    background-color: blueviolet;
+}
+
+#email:hover {
+    color:blueviolet;
+}
