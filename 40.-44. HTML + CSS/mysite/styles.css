@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+.top-container {
+    background: #FFE3E1;
+    color: #FF9494;
+    padding: 0 0 0;
+    position: relative;
+    }
+
+.middle-container {
+    background: blue
+    ;
+    height: 200px;
+    width: 200px;
+    }
+
+.bottom-container {
+    background: #FFE3E1;
+    height: 200px;
+    width: 200px;
+        
+    }    
+    
+.pro{
+    text-decoration: underline;
+}    
