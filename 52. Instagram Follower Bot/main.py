@@ -6,7 +6,7 @@ import time
 import os
 
 IG_USERNAME = os.environ["IG_USER"]
-IG_PASSWORD = "oxWNpxiV*!T%7Cw5sa"
+IG_PASSWORD = os.environ["IG_PASS"]
 chrome_driver_path = r"C:/Users/Martyna/projects/100dayspython/Selenium driver to chrome/chromedriver.exe"
 
 ser = Service(chrome_driver_path)
@@ -22,7 +22,7 @@ time.sleep(2)
 username_ig = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/section/main/div/div/div[1]/div[2]/form/div/div[1]/div/label/input')
 username_ig.send_keys(IG_USERNAME)
 pass_ig = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/section/main/div/div/div[1]/div[2]/form/div/div[2]/div/label/input')
-pass_ig.send_keys(IG_PASSWORD)
+pass_ig.send_keys(f'{IG_PASSWORD}*!T%7Cw5sa')
 log_in_ig_button= driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/section/main/div/div/div[1]/div[2]/form/div/div[3]')
 log_in_ig_button.click()
 time.sleep(5)
