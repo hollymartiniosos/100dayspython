@@ -13,7 +13,7 @@ ser = Service(chrome_driver_path)
 op = wb.ChromeOptions()
 op.add_experimental_option("detach", True)
 driver = wb.Chrome(service=ser, options=op)
-driver.get(r'https://www.instagram.com/vacationtlps/')
+driver.get(r'https://www.instagram.com/tamaki_nakajima_okinawa/')
 driver.maximize_window()
 time.sleep(2)
 log_in_button = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/section/nav/div[2]/div/div/div[3]/div/div/div[2]/div[1]/a/button')
@@ -79,6 +79,7 @@ except:
             if count == 100:
                 clicking = False  
         
+driver.quit()        
         
 
     
