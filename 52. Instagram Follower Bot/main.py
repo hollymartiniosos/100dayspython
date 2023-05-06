@@ -13,7 +13,7 @@ ser = Service(chrome_driver_path)
 op = wb.ChromeOptions()
 op.add_experimental_option("detach", True)
 driver = wb.Chrome(service=ser, options=op)
-driver.get(r'https://www.instagram.com/tamaki_nakajima_okinawa/')
+driver.get(r'https://www.instagram.com/the.traveller.girl/')
 driver.maximize_window()
 time.sleep(2)
 log_in_button = driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[1]/div/div/div/div[1]/section/nav/div[2]/div/div/div[3]/div/div/div[2]/div[1]/a/button')
@@ -73,7 +73,6 @@ except:
         except:
             time.sleep(7)
             follow_button = driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[1]/div/div[{count+1}]/div/div/div/div[3]/div/button')
-            print(follow_button)
             follow_button.click()
             count += 1
             if count == 100:
