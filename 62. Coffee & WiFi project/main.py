@@ -45,8 +45,6 @@ def home():
 def add_cafe():
     form = CafeForm()
     if form.validate_on_submit():
-        print("True")
-        print(form.data)
         new_row = list(form.data.values())[:7]
         with open('cafe-data.csv',"a", newline='', encoding='utf-8') as csv_file:
             new_row_writer = csv.writer(csv_file, delimiter=',')
@@ -62,7 +60,7 @@ def cafes():
         list_of_rows = []
         for row in csv_data:
             list_of_rows.append(row)
-    print(list_of_rows)        
+          
     return render_template('cafes.html', cafes=list_of_rows)
 
 
