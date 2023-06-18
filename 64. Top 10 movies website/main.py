@@ -8,8 +8,8 @@ import requests
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 
-MOVIE_DB_API_KEY = "3df979b2"
-MOVIE_DB_SEARCH_URL = "http://www.omdbapi.com/?i=tt1630029&apikey=3df979b2"
+MOVIE_DB_API_KEY = ""
+MOVIE_DB_SEARCH_URL = "http://www.omdbapi.com/?i=tt1630029&apikey="
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
