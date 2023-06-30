@@ -21,6 +21,7 @@ gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=Fa
 app.config['SQLALCHEMY_DATABASE_URI'] = rf'sqlite:///{str(Path(__file__).parent)}/blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+app.app_context().push()
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -62,6 +63,8 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
     comment_author = relationship("User", back_populates="comments")
     text = db.Column(db.Text, nullable=False)
+
+    
 # db.create_all()
 
 
