@@ -8,11 +8,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Angela's Blog</title>
-
+  <title>Martyna's Blog</title>
+  <link rel="icon" href="C:/Users/Martyna/projects/100dayspython/69. Blog Capstone Adding Users/favicon.ico">
   <!-- Bootstrap core CSS -->
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
+ 
   <!-- Custom fonts for this template -->
   <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -20,6 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static', filename='css/clean-blog.min.css')}}" rel="stylesheet">
+  
 
 </head>
 
@@ -28,7 +29,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="{{url_for('get_all_posts')}}">Angela's Blog</a>
+      <a class="navbar-brand" href="{{url_for('get_all_posts')}}">Martyna's Blog</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
