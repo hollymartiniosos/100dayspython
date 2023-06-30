@@ -13,7 +13,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 @login_manager.user_loader
 def load_user(user_id):
-    return User.get(int(user_id))
+    return User.get(user_id)
 
 ##CREATE TABLE IN DB
 class User(UserMixin, db.Model):
